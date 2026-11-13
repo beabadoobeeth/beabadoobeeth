@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>the life of beabadoobeeth</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Caudex:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0a0a0a;--paper:#f5f5f4;--navy:#1d2350;--gold:#f6e84a;--moss:#2c2a1f;--mute:#b9b6a8;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ink);color:#fff;font:19px/1.7 "IM Fell English",Georgia,serif}
+h1,h2,h3{font-family:"Caudex","IM Fell English",Georgia,serif;margin:0;line-height:1.05}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+nav{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;align-items:center;gap:clamp(12px,2.4vw,34px);padding:22px clamp(18px,5vw,70px);flex-wrap:wrap}
+nav .logo{font:700 30px "Caudex",serif;margin-right:auto;text-decoration:none}
+nav a{text-decoration:none;font-size:18px}
+nav a.on{border-bottom:1px solid var(--gold)}
+nav a.talk{border:2px solid #fff;border-radius:40px;padding:4px 20px}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:130px clamp(18px,6vw,90px) 60px;
+background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.6)),radial-gradient(ellipse at 18% 30%,#6b5f4c 0,transparent 38%),radial-gradient(ellipse at 40% 70%,#8a6a45 0,transparent 30%),radial-gradient(ellipse at 85% 40%,#4d5a2c 0,transparent 40%),linear-gradient(120deg,#2b2a22,#4a4a38 55%,#3a3d27)}
+.hero h1{font-size:clamp(46px,11vw,150px);font-weight:700;letter-spacing:-.01em}
+.hero .by{font-weight:700;margin:26px 0 12px;font-size:20px}
+.hero p{max-width:900px;margin:0 auto 14px}
+.hero p em{color:var(--gold);font-style:normal}
+.light{background:#f5f5f5;color:var(--navy);padding:90px clamp(18px,6vw,90px)}
+.light h2{text-align:center;font-size:clamp(34px,5vw,54px);margin-bottom:56px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:36px;max-width:1200px;margin:0 auto}
+.grid a{text-decoration:none}
+.grid h3{font-size:34px;margin-bottom:8px;font-weight:400}
+.grid p{margin:0;color:#444;font-size:18px}
+.grid a:hover h3{text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:6px}
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,70px);align-items:center;padding:100px clamp(18px,6vw,90px);max-width:1250px;margin:0 auto}
+.photo{aspect-ratio:4/3;background:linear-gradient(160deg,#16140f,#2c2a1f 60%,#4a4220);border:1px solid #333;display:flex;align-items:flex-end;padding:16px;color:var(--mute);font-size:15px}
+.about h2{font-size:clamp(34px,4.5vw,54px);margin-bottom:18px}
+.about p{max-width:60ch}
+.socials{display:flex;gap:18px;flex-wrap:wrap;margin-top:12px}
+.socials a{border-bottom:1px solid var(--gold);text-decoration:none}
+.page{padding:140px clamp(18px,6vw,90px) 90px;max-width:1100px;margin:0 auto;min-height:80vh}
+.page h2{font-size:clamp(38px,6vw,70px);margin-bottom:12px}
+.lede{color:var(--mute);max-width:60ch;margin:0 0 34px}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px}
+.chips button{background:none;color:#fff;border:1px solid #555;border-radius:30px;padding:3px 16px;font:inherit;cursor:pointer}
+.chips button[aria-pressed=true]{background:var(--gold);color:#111;border-color:var(--gold)}
+.posts{display:grid;gap:34px}
+.post{border-top:1px solid #333;padding-top:22px}
+.post h3{font-size:clamp(26px,3.4vw,38px);margin:4px 0 6px}
+.post small{color:var(--gold)}
+.post p{margin:6px 0 0;max-width:62ch;color:#e4e2d8}
+.empty{color:var(--mute)}
+form{display:grid;gap:14px;max-width:560px}
+input,textarea{background:#111;color:#fff;border:1px solid #444;padding:12px;font:inherit;border-radius:4px}
+.btn{justify-self:start;background:var(--gold);color:#111;border:0;border-radius:40px;padding:8px 28px;font:700 18px "Caudex",serif;cursor:pointer}
+.now{max-width:760px;margin:0 auto 22px;color:var(--gold);border:1px solid var(--gold);border-radius:40px;padding:6px 22px;font-size:18px}.now strong{font-family:"Caudex",serif}.bucket{max-width:900px;margin:0 auto;padding:90px clamp(18px,6vw,90px) 10px}.bucket h2{font-size:clamp(34px,4.5vw,54px)}.bucket ul{list-style:none;margin:0;padding:0}.bucket li{padding:12px 0;border-bottom:1px solid #2a2a2a;font-size:21px}.bucket li span[aria-hidden]{color:var(--gold);margin-right:10px}.bucket li.done{color:var(--mute);text-decoration:line-through;text-decoration-color:var(--gold)}.sr{position:absolute;left:-9999px}
+.latest{max-width:1100px;margin:0 auto;padding:30px clamp(18px,6vw,90px) 20px}.latest h2{font-size:clamp(34px,4.5vw,54px);margin-bottom:26px}.more{display:inline-block;margin-top:26px;border-bottom:1px solid var(--gold);text-decoration:none}.home-end .page{padding-top:70px;min-height:0}
+footer{text-align:center;color:var(--mute);padding:36px 18px;border-top:1px solid #222;font-size:16px}
+@media(max-width:760px){.about{grid-template-columns:1fr}nav a.talk{padding:2px 14px}}
+@media(prefers-reduced-motion:no-preference){.hero h1{animation:rise .9s ease both}@keyframes rise{from{opacity:0;transform:translateY(14px)}}}
+</style>
+</head>
+<body>
+<nav aria-label="Main">
+<a class="logo" href="#home" aria-label="Home">JS</a>
+<a href="#home" data-v="home">Home</a><a href="#about" data-v="about">About Me</a><a href="#stories" data-v="stories">Stories</a><a href="#travel" data-v="travel">Travel</a><a href="#hobbies" data-v="hobbies">Hobbies</a><a href="#contact" data-v="contact">Get in Touch</a><a class="talk" href="#contact">Let’s Talk</a>
+</nav>
+<main id="app"></main>
+<footer>© 2026 Joebeth · the life of beabadoobeeth</footer>
+<script>
+/* To add a story: copy one line into POSTS (newest first). cat: stories | travel | hiking | food | hobbies */
+var POSTS=[
+{cat:"hiking",date:"Nov 2026",title:"My first beginner trail (sample post)",text:"Replace this with your own story. Share the trail, how long it took, what you packed, and what you’d tell a first-timer."},
+{cat:"food",date:"Nov 2026",title:"A hole-in-the-wall I almost walked past (sample post)",text:"Replace this with your own story. What you ordered, what it cost, and why it stayed with you."},
+{cat:"travel",date:"Oct 2026",title:"Getting lost in a part of the metro I’d never seen (sample post)",text:"Replace this with your own story. Where you went, how you got there, and what surprised you."},
+{cat:"stories",date:"Oct 2026",title:"Why I started this blog (sample post)",text:"Replace this with your own story. It can be as short as a few lines."}
+];
+/* Edit NOW anytime. In BUCKET, set d:true when you finish an item. */
+var NOW={date:"Nov 2026",text:"planning a weekend hike and hunting for a new food spot to try. (sample note)"};
+var BUCKET=[{t:"Hike my first summit (sample)",d:false},{t:"Try a dish I can’t pronounce (sample)",d:true},{t:"Visit a province I’ve never been to (sample)",d:false},{t:"Catch a sunrise from a mountain (sample)",d:false},{t:"Write 20 stories on this blog (sample)",d:false}];
+function bucket(){var done=BUCKET.filter(function(b){return b.d}).length;return '<section class="bucket"><h2>Bucket List</h2><p class="lede">'+done+' of '+BUCKET.length+' done so far.</p><ul>'+BUCKET.map(function(b){return '<li class="'+(b.d?'done':'')+'"><span aria-hidden="true">'+(b.d?'☑':'☐')+'</span> '+esc(b.t)+(b.d?' <span class="sr">(done)</span>':'')+'</li>'}).join('')+'</ul></section>'}
+var LABEL={stories:"Stories",travel:"Travel",hiking:"Hikes",food:"Food",hobbies:"Hobbies"};
+var app=document.getElementById("app");
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function list(cats,filter,n){
+ var r=POSTS.filter(function(p){return cats.indexOf(p.cat)>-1&&(!filter||filter==="all"||p.cat===filter)});
+ if(n)r=r.slice(0,n);
+ if(!r.length)return '<p class="empty">Nothing here yet. New posts will show up here.</p>';
+ return r.map(function(p){return '<article class="post"><small>'+esc(LABEL[p.cat])+' · '+esc(p.date)+'</small><h3>'+esc(p.title)+'</h3><p>'+esc(p.text)+'</p></article>'}).join("");
+}
+var VIEWS={
+home:function(){return '<section class="hero"><h1>the life of<br>beabadoobeeth</h1><div class="by">by Joebeth</div><div class="now"><strong>Right now</strong> ('+esc(NOW.date)+'): '+esc(NOW.text)+'</div><p>Hello, everyone! My name is Joebeth, and I’m very happy that you took the time to visit my website. I’m still new to blogging, but I made this space to share my life and experiences, and to explore <em>digital content creation, web design</em>, and everything related to technology.</p><p><em>I look forward to connecting with all of you soon! &lt;3</em></p></section>'
+ +'<section class="light"><h2>What You’ll Find Here</h2><div class="grid"><a href="#stories"><h3>stories</h3><p>get to know me and the things I’m passionate about</p></a><a href="#travel"><h3>destinations</h3><p>explore the places I’ve visited and the memories I’ve made</p></a><a href="#hobbies"><h3>hiking</h3><p>join me on the trail as I explore beginner-friendly hikes</p></a><a href="#hobbies"><h3>food</h3><p>discover new flavors with me as I try local and international food</p></a></div></section>'
+ +bucket()
+ +'<section class="about"><div class="photo" role="img" aria-label="Photo placeholder">Your photo goes here</div><div><h2>Hello, I’m Joebeth!</h2><p>I’ve found myself becoming increasingly curious about the world around me (I blame TravelTok!). I’ve been spending my time exploring unfamiliar places in the metro, discovering different food, and finding some adventures to look forward to on weekends. But this curiosity didn’t happen overnight.</p><p><a href="#about">[Read more about me…]</a></p><h3>connect with me</h3><div class="socials"><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">TikTok</a><a href="#">YouTube</a></div></div></section>'
+ +'<section class="latest"><h2>Latest Stories</h2><div class="posts">'+list(["stories","travel","hiking","food","hobbies"],"all",3)+'</div><a class="more" href="#stories">See all stories</a></section>'
+ +'<div class="home-end">'+VIEWS.contact()+'</div>'},
+about:function(){return '<section class="page"><h2>About Me</h2><p class="lede">Write your longer story here: where you grew up, what got you exploring, and what you hope to find along the way.</p><div class="about" style="padding:0"><div class="photo" role="img" aria-label="Photo placeholder">Your photo goes here</div><div><p>I’ve found myself becoming increasingly curious about the world around me (I blame TravelTok!). I’ve been spending my time exploring unfamiliar places in the metro, discovering different food, and finding some adventures to look forward to on weekends.</p><div class="socials"><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">TikTok</a><a href="#">YouTube</a></div></div></div></section>'},
+stories:function(){return '<section class="page"><h2>Stories</h2><p class="lede">Everything I’ve written, newest first.</p><div class="chips" role="group" aria-label="Filter stories">'+["all","stories","travel","hiking","food","hobbies"].map(function(c){return '<button data-f="'+c+'" aria-pressed="'+(c==="all")+'">'+(c==="all"?"All":LABEL[c])+'</button>'}).join("")+'</div><div class="posts" id="plist">'+list(["stories","travel","hiking","food","hobbies"])+'</div></section>'},
+travel:function(){return '<section class="page"><h2>Travel</h2><p class="lede">Places I’ve visited and the memories I’ve made.</p><div class="posts">'+list(["travel"])+'</div></section>'},
+hobbies:function(){return '<section class="page"><h2>Hobbies</h2><p class="lede">Hikes, food trips, and whatever else I’m into this month.</p><div class="posts">'+list(["hiking","food","hobbies"])+'</div></section>'},
+contact:function(){return '<section class="page"><h2>Get in Touch</h2><p class="lede">Say hi, share a trail or a food spot I should try, or just tell me what you’re up to.</p><form onsubmit="return false"><input aria-label="Your name" placeholder="Your name"><input aria-label="Your email" type="email" placeholder="Your email"><textarea aria-label="Message" rows="5" placeholder="Your message"></textarea><button class="btn" type="button">Send message</button></form><p class="lede" style="margin-top:20px">The form is a preview only. It will send real messages once the site is hosted.</p></section>'}
+};
+function route(){
+ var v=(location.hash||"#home").slice(1);if(!VIEWS[v])v="home";
+ app.innerHTML=VIEWS[v]();window.scrollTo(0,0);
+ document.querySelectorAll("nav a[data-v]").forEach(function(a){a.classList.toggle("on",a.dataset.v===v)});
+ document.title=(v==="home"?"":LABEL[v]?LABEL[v]+" · ":v==="about"?"About Me · ":"Get in Touch · ")+"the life of beabadoobeeth";
+ var b=app.querySelectorAll("[data-f]");
+ b.forEach(function(x){x.onclick=function(){b.forEach(function(y){y.setAttribute("aria-pressed",y===x)});document.getElementById("plist").innerHTML=list(["stories","travel","hiking","food","hobbies"],x.dataset.f)}});
+}
+window.addEventListener("hashchange",route);route();
+</script>
+</body>
+</html>
